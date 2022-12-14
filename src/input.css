@@ -7,6 +7,11 @@ h1{
     text-center 
 }
 
+.container{
+  justify-content: center !important;
+}
+
+
 .square{
     background-color: #ec4899;
 }
@@ -19,6 +24,9 @@ p{
     @apply bg-red-500 text-white h-24 col-span-2 rounded-xl shadow-xl hover:shadow-red-500/60
 }
 
+.market{
+  color: white;
+}
 
 .page-wrapper {
   min-height: 100%;
@@ -70,7 +78,8 @@ p{
   right: 20px;
   width: 50px;
   height: 50px;
-  background: #292d48;
+  background: #b4b6c5;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;

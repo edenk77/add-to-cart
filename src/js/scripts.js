@@ -1,6 +1,11 @@
 $('.add-to-cart').on('click', function () {
-  var cart = $('.shopping-cart');
-  var imgtodrag = $(this).parents('.card').find("img").eq(0);
+
+    var button = $(this);
+    var cart = $('.shopping-cart');
+    var imgtodrag = $(this).parents('.item').find("img").eq(0);
+    var cartTotal = cart.attr('data-totalitems');
+    var newCartTotal = parseInt(cartTotal) + 1;
+
   if (imgtodrag) {
       var imgclone = imgtodrag.clone()
           .offset({
@@ -35,9 +40,9 @@ $('.add-to-cart').on('click', function () {
           $(this).detach()
       });
 
-      button.addClass('add-to-cart');
+      button.addClass('.shopping-cart');
     setTimeout(function(){
-      button.removeClass('add-to-cart');
+      button.removeClass('.add-to-cart');
       cart.addClass('shake').attr('data-totalitems', newCartTotal);
       setTimeout(function(){
         cart.removeClass('shake');
